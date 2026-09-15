@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StayGreen Compliance — AI-Powered ISN Compliance for Oil & Gas Contractors</title>
+<meta name="description" content="StayGreen is your done-for-you AI compliance department. We keep oil & gas contractors 100% green in ISNetworld — training certs, RAVS programs, insurance, quarterly stats — so you never lose a bid or a dispatch to a red light.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-deep:#0b151e;
+  --navy:#12202e;
+  --slate:#3e536e;
+  --card:#16273a;
+  --card-border:#25405c;
+  --blue:#1c9af0;
+  --blue-dark:#0f6fd1;
+  --green:#3dbb2e;
+  --green-light:#5fd63c;
+  --text:#e8eef5;
+  --muted:#aabdd1;
+  --red:#e5484d;
+  --yellow:#f0b429;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--navy-deep);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.wordmark{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
+a{color:var(--blue);text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+.grad-text-blue{background:linear-gradient(180deg,var(--blue) 0%,var(--blue-dark) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad-text-green{background:linear-gradient(180deg,var(--green-light) 0%,var(--green) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(11,21,30,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--card-border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.wordmark{font-size:1.5rem;font-weight:800;color:var(--text)}
+.wordmark .sub{display:block;font-size:.62rem;font-weight:600;letter-spacing:.42em;color:var(--green);margin-top:-4px}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:var(--muted);font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.btn{display:inline-block;padding:13px 28px;border-radius:8px;font-weight:600;font-size:.95rem;transition:all .2s;cursor:pointer;border:none}
+.btn-green{background:linear-gradient(180deg,var(--green-light),var(--green));color:#06220a;box-shadow:0 4px 18px rgba(61,187,46,.35)}
+.btn-green:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(61,187,46,.5)}
+.btn-outline{border:1px solid var(--card-border);color:var(--text);background:transparent}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+.btn-sm{padding:9px 20px;font-size:.85rem}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0b151e 0%,#14283c 55%,#3e536e 130%);padding:88px 0 72px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 75% 30%,rgba(28,154,240,.12),transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center;position:relative;z-index:1}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--green);border:1px solid rgba(61,187,46,.4);background:rgba(61,187,46,.08);padding:6px 14px;border-radius:99px;margin-bottom:22px}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.1rem);font-weight:800;margin-bottom:20px}
+.hero p.lede{font-size:1.15rem;color:var(--muted);max-width:540px;margin-bottom:32px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:34px}
+.hero-logo{position:relative}
+.hero-logo img{display:block;width:118%;max-width:none;height:auto;margin-left:-9%;
+  -webkit-mask-image:radial-gradient(ellipse 62% 58% at 50% 50%,#000 40%,transparent 74%);
+  mask-image:radial-gradient(ellipse 62% 58% at 50% 50%,#000 40%,transparent 74%);
+  filter:drop-shadow(0 18px 40px rgba(0,0,0,.45))}
+.trust-line{font-size:.85rem;color:var(--muted)}
+.trust-line strong{color:var(--text)}
+
+/* STATS BAND */
+.stats-band{background:var(--navy);border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;text-align:center}
+.stat{padding:38px 18px;border-right:1px solid var(--card-border)}
+.stat:last-child{border-right:none}
+.stat .num{font-family:'Barlow Condensed';font-size:2.7rem;font-weight:800;color:var(--text)}
+.stat .num.red{color:var(--red)} .stat .num.green{color:var(--green)} .stat .num.blue{color:var(--blue)} .stat .num.yellow{color:var(--yellow)}
+.stat .label{font-size:.85rem;color:var(--muted);max-width:220px;margin:6px auto 0}
+
+/* SECTIONS */
+section{padding:88px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 56px}
+.section-head h2{font-size:clamp(2rem,4vw,2.9rem);font-weight:800;margin-bottom:14px}
+.section-head p{color:var(--muted);font-size:1.05rem}
+.kicker{font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:12px}
+
+/* PAIN */
+.pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.pain-card{background:var(--card);border:1px solid var(--card-border);border-radius:14px;padding:30px}
+.pain-card .icon{width:52px;height:52px;border-radius:12px;background:rgba(28,154,240,.12);border:1px solid rgba(28,154,240,.25);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:16px}
+.pain-card h3{font-size:1.3rem;margin-bottom:10px;color:var(--text)}
+.pain-card p{color:var(--muted);font-size:.95rem}
+
+/* HOW IT WORKS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{background:var(--card);border:1px solid var(--card-border);border-radius:14px;padding:34px 28px;position:relative}
+.step .n{font-family:'Barlow Condensed';font-weight:800;font-size:1.1rem;width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;background:linear-gradient(135deg,var(--blue),var(--blue-dark));color:#fff}
+.step:last-child .n{background:linear-gradient(135deg,var(--green-light),var(--green));color:#06220a}
+.step h3{font-size:1.35rem;margin-bottom:10px}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* ENGINES */
+.engines{background:var(--navy)}
+.engine-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.engine{background:var(--card);border:1px solid var(--card-border);border-radius:14px;padding:34px;transition:border-color .2s}
+.engine:hover{border-color:var(--blue)}
+.engine .tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:6px;margin-bottom:16px}
+.tag-blue{background:rgba(28,154,240,.14);color:var(--blue)}
+.tag-green{background:rgba(61,187,46,.14);color:var(--green)}
+.tag-soon{background:rgba(240,180,41,.14);color:var(--yellow)}
+.engine h3{font-size:1.5rem;margin-bottom:10px}
+.engine p{color:var(--muted);font-size:.95rem;margin-bottom:12px}
+.engine .kills{font-size:.85rem;font-weight:600;color:var(--green)}
+
+/* COMPARE */
+.compare-wrap{overflow-x:auto}
+table.compare{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--card-border);border-radius:14px;overflow:hidden}
+.compare th,.compare td{padding:18px 22px;text-align:left;border-bottom:1px solid var(--card-border);border-right:1px solid rgba(37,64,92,.5);font-size:.95rem}
+.compare th:last-child,.compare td:last-child{border-right:none}
+.compare th{font-family:'Barlow Condensed';font-size:1.15rem;text-transform:uppercase;letter-spacing:.04em;background:var(--navy);color:var(--text)}
+.compare td{color:var(--muted)}
+.compare tr:nth-child(even) td{background:rgba(11,21,30,.35)}
+.compare tr:last-child td{border-bottom:none}
+.compare .hl{color:var(--text);font-weight:600}
+.compare th.sg{color:var(--green);background:rgba(61,187,46,.1)}
+.compare td.sg{color:#fff;font-weight:600;background:rgba(61,187,46,.09)}
+.x{color:var(--red)} .ok{color:var(--green)}
+
+/* GUARANTEE */
+.guarantee{background:linear-gradient(135deg,#0e1d12 0%,#12202e 100%);border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border)}
+.guarantee-inner{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;max-width:900px;margin:0 auto}
+.shield{font-size:4.5rem}
+.guarantee h2{font-size:2.2rem;margin-bottom:12px}
+.guarantee p{color:var(--muted)}
+.guarantee p strong{color:var(--text)}
+
+/* CONSULTANTS */
+.consult{background:var(--navy)}
+.consult-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.consult h2{font-size:clamp(1.9rem,3.5vw,2.6rem);margin-bottom:16px}
+.consult p{color:var(--muted);margin-bottom:16px}
+.consult ul{list-style:none;margin:20px 0 28px}
+.consult li{padding:9px 0 9px 34px;position:relative;color:var(--text);font-size:.98rem}
+.consult li::before{content:'✓';position:absolute;left:0;top:9px;width:22px;height:22px;border-radius:6px;background:rgba(61,187,46,.15);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700}
+.math-card{background:var(--card);border:1px solid var(--card-border);border-radius:14px;padding:34px}
+.math-card h3{font-size:1.3rem;margin-bottom:18px;color:var(--text)}
+.math-row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--card-border);font-size:.95rem}
+.math-row:last-child{border-bottom:none}
+.math-row .k{color:var(--muted)} .math-row .v{font-weight:600}
+.math-row .v.up{color:var(--green)}
+
+/* PRICING */
+.price-card{max-width:520px;margin:0 auto;background:var(--card);border:1px solid var(--green);border-radius:18px;padding:48px 44px;text-align:center;box-shadow:0 0 60px rgba(61,187,46,.12)}
+.price-card .plan{font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+.price-card .price{font-family:'Barlow Condensed';font-size:4rem;font-weight:800}
+.price-card .price span{font-size:1.3rem;color:var(--muted);font-weight:600}
+.price-card .sub{color:var(--muted);font-size:.92rem;margin:10px 0 26px}
+.price-card ul{list-style:none;text-align:left;margin-bottom:36px}
+.price-card li{padding:8px 0 8px 30px;position:relative;font-size:.95rem}
+.price-card li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700}
+.price-note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:20px}
+
+/* CTA */
+.cta-final{text-align:center;background:linear-gradient(135deg,#0b151e,#14283c 60%,#1a3450)}
+.cta-final h2{font-size:clamp(2.2rem,4.5vw,3.2rem);margin-bottom:16px}
+.cta-final p{color:var(--muted);max-width:560px;margin:0 auto 34px;font-size:1.08rem}
+
+/* FOOTER */
+footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--navy-deep)}
+.foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+.foot-inner .small{color:var(--muted);font-size:.85rem}
+
+@media(max-width:900px){
+  .hero-grid,.consult-grid,.guarantee-inner{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat{border-bottom:1px solid var(--card-border)}
+  .pain-grid,.steps,.engine-grid{grid-template-columns:1fr}
+  .nav-links a:not(.btn){display:none}
+  .hero{padding:56px 0}
+  .hero-logo{max-width:480px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <div class="wordmark"><span class="grad-text-blue">Stay</span><span class="grad-text-green">Green</span> <span style="color:var(--blue)">Compliance</span><span class="sub">AI Powered Solutions</span></div>
+    <div class="nav-links">
+      <a href="#problem">The Problem</a>
+      <a href="#engines">What We Do</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#consultants">For Consultants</a>
+      <a href="#contact" class="btn btn-green btn-sm">Book a Demo</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">⬤ Done-For-You ISN® Compliance</span>
+      <h1>Never Lose a Job<br>to a <span style="color:var(--red)">Red Light</span> Again.</h1>
+      <p class="lede">StayGreen is your AI compliance department. We handle your training certs, safety programs, insurance docs, and quarterly stats — and keep you <strong style="color:var(--green)">100% green</strong> with every operator, all year long.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-green">Book a Demo</a>
+        <a href="#engines" class="btn btn-outline">See How It Works</a>
+      </div>
+      <p class="trust-line">Your job shrinks to two things: <strong>forward documents</strong> and <strong>click approve</strong>. We do the rest.</p>
+    </div>
+    <div class="hero-logo">
+      <img src="assets/staygreen-logo.jpg" alt="StayGreen Compliance — AI Powered Solutions">
+    </div>
+  </div>
+</header>
+
+<div class="stats-band">
+  <div class="container stats-grid">
+    <div class="stat"><div class="num red">30–40%</div><div class="label">of contractors are red with at least one operator right now</div></div>
+    <div class="stat"><div class="num yellow">40 hrs</div><div class="label">per month of ISN admin work for a mid-sized contractor</div></div>
+    <div class="stat"><div class="num blue">&lt;20%</div><div class="label">of contractors stay green for 12 straight months</div></div>
+    <div class="stat"><div class="num green">100%</div><div class="label">green — the only number that keeps you on the call-out list</div></div>
+  </div>
+</div>
+
+<section id="problem">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">The Problem</span>
+      <h2>Your ISN Grade Is a <span class="grad-text-green">Revenue Switch</span></h2>
+      <p>Going red isn't a paperwork problem — it's lost work you never even see. And it's almost never about safety. It's admin failure: an expired cert, a missed quarterly report, a COI with the wrong wording.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card"><span class="icon">📋</span><h3>Removed From Bid Lists</h3><p>Red status filters you out of RFPs before you ever see the invitation. You lose bids you never knew existed.</p></div>
+      <div class="pain-card"><span class="icon">🌙</span><h3>Blocked 2AM Call-Outs</h3><p>A field manager types your vendor ID into SAP at 2am. If your light is red, the PO auto-blocks and the next green vendor gets the call. That's a $2K–$50K job gone in one keystroke.</p></div>
+      <div class="pain-card"><span class="icon">🚧</span><h3>Turned Away at the Gate</h3><p>Crew drives two hours, badge scans red — one expired H2S cert. Whole crew sent home. Day lost, client furious.</p></div>
+      <div class="pain-card"><span class="icon">⏰</span><h3>Silent Expirations</h3><p>Insurance lapses at midnight. Operators change requirements 15–25 times a year with 30-day windows buried in ISN's message center. Nobody's watching — until the light flips.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">How It Works</span>
+      <h2>Forward. Approve. <span class="grad-text-green">Stay Green.</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Forward Your Documents</h3><p>Snap a phone photo of a training cert. Forward the COI your broker sent. Email the sign-in sheet. That's your whole job.</p></div>
+      <div class="step"><div class="n">2</div><h3>AI Does the Work</h3><p>Our engines read every document, match records to your roster, track every rolling expiration, draft safety programs, and flag problems before ISN ever sees them.</p></div>
+      <div class="step"><div class="n">3</div><h3>You Approve in One Click</h3><p>Nothing goes anywhere without your sign-off. Alerts arrive 60, 30, and 7 days before anything expires. Your dashboard shows every operator, every line item — green.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="engines" id="engines">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">The Engines</span>
+      <h2>A Full Compliance Department, <span class="grad-text-blue">Running 24/7</span></h2>
+      <p>Four AI engines cover the work that eats 40 hours a month — verified on real contractor documents.</p>
+    </div>
+    <div class="engine-grid">
+      <div class="engine">
+        <span class="tag tag-blue">Live</span>
+        <h3>📸 Training Records Engine</h3>
+        <p>Photo, PDF, or sign-in sheet in → worker, course, and dates extracted, matched to your roster. Every rolling expiry tracked with alerts at 60/30/7 days. No more typing certs one at a time.</p>
+        <p class="kills">Kills 45% of your ISN workload</p>
+      </div>
+      <div class="engine">
+        <span class="tag tag-blue">Live</span>
+        <h3>📝 RAVS Program Writer</h3>
+        <p>Ingests the operator's requirement rubric, drafts the compliant safety program, and when a reviewer rejects it, parses the feedback and redrafts point-by-point. The rejection loop ends.</p>
+        <p class="kills">Kills 25% of your ISN workload</p>
+      </div>
+      <div class="engine">
+        <span class="tag tag-blue">Live</span>
+        <h3>🛡️ Insurance Watchdog</h3>
+        <p>Reads ACORD COIs including the endorsement pages. Catches missing waiver-of-subrogation and primary-&-non-contributory wording <em>before</em> ISN bounces it — and drafts the exact request email for your broker.</p>
+        <p class="kills">Kills 15% of your ISN workload</p>
+      </div>
+      <div class="engine">
+        <span class="tag tag-soon">Coming Soon</span>
+        <h3>🔄 Portal Sync</h3>
+        <p>StayGreen submits directly to ISN as your authorized named user — uploads training packets, files programs and quarterly stats, and watches the message center so a requirement change never blindsides you. You approve every submission first.</p>
+        <p class="kills">Nobody else in the market does this</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">The Comparison</span>
+      <h2>How Contractors Handle ISN Today</h2>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare">
+        <tr><th></th><th>In-House Admin</th><th>Compliance Consultant</th><th class="sg">StayGreen</th></tr>
+        <tr><td class="hl">Annual cost</td><td>$10–15K (0.25 FTE)</td><td>$4–7K per portal</td><td class="sg">From $499/mo</td></tr>
+        <tr><td class="hl">Watches your portal daily</td><td><span class="x">✕</span> Between other jobs</td><td><span class="x">✕</span> Weekly at best</td><td class="sg"><span class="ok">✓</span> 24/7 monitoring</td></tr>
+        <tr><td class="hl">Expiry alerts before it's too late</td><td><span class="x">✕</span> Spreadsheet roulette</td><td><span class="x">~</span> Sometimes</td><td class="sg"><span class="ok">✓</span> 60/30/7-day alerts</td></tr>
+        <tr><td class="hl">Drafts RAVS programs</td><td><span class="x">✕</span></td><td><span class="ok">✓</span> Slowly, billed hourly</td><td class="sg"><span class="ok">✓</span> Draft in minutes, rejection-loop handled</td></tr>
+        <tr><td class="hl">Catches COI wording errors early</td><td><span class="x">✕</span></td><td><span class="x">~</span> After ISN bounces it</td><td class="sg"><span class="ok">✓</span> Before submission</td></tr>
+        <tr><td class="hl">Scales when you add operators</td><td><span class="x">✕</span> More hours</td><td><span class="x">✕</span> Bigger retainer</td><td class="sg"><span class="ok">✓</span> Same subscription</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="guarantee">
+  <section style="padding:72px 0">
+    <div class="container guarantee-inner">
+      <div class="shield">🛡️</div>
+      <div>
+        <h2>You're Not Buying Software.<br>You're Buying <span class="grad-text-green">Revenue Insurance.</span></h2>
+        <p>A single admin oversight can silently knock you off an operator's call-out list. One prevented gate lockout — one won bid — pays for years of StayGreen. <strong>We keep every admin item green: certs, documents, deadlines, and submissions.</strong> So you never miss a bid or a dispatch.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Pricing</span>
+      <h2>Less Than a Consultant.<br>More Than a <span class="grad-text-blue">Whole Department.</span></h2>
+    </div>
+    <div class="price-card">
+      <div class="plan">StayGreen Complete</div>
+      <div class="price">$499<span>/mo</span></div>
+      <p class="sub">Done-for-you compliance for your entire ISN account</p>
+      <ul>
+        <li>All engines: training records, RAVS drafting, insurance watchdog</li>
+        <li>Every operator, every line item on one live dashboard</li>
+        <li>60/30/7-day expiration alerts — nothing expires silently</li>
+        <li>Daily digest + proactive requirement-change monitoring</li>
+        <li>Human approval on everything — you stay in control</li>
+        <li>Chat with your compliance agent any time, from any device</li>
+      </ul>
+      <a href="#contact" class="btn btn-green" style="width:100%">Book a Demo</a>
+    </div>
+    <p class="price-note">Multi-portal and larger rosters quoted individually. Compare that to $4–7K/yr for a consultant who checks in weekly.</p>
+  </div>
+</section>
+
+<section class="consult" id="consultants">
+  <div class="container consult-grid">
+    <div>
+      <span class="kicker">For Compliance Consultants</span>
+      <h2>Run 60 Accounts With the Headcount of 20.</h2>
+      <p>You're capped because every account costs hours — scanning certs, rewriting RAVS programs, chasing brokers. StayGreen is the white-label AI back office that does the data entry while <strong style="color:var(--text)">you stay the expert and own the relationship.</strong></p>
+      <ul>
+        <li>White-label — your brand, your clients never see us</li>
+        <li>Contractual no-solicitation, both directions, in writing</li>
+        <li>Human-in-the-loop: you approve every client-facing item</li>
+        <li>Confidence-gated AI — anything uncertain routes to review, not to ISN</li>
+        <li>Founding partner rates locked for the first firms in</li>
+      </ul>
+      <a href="#contact" class="btn btn-outline">Ask About Founding Partnership</a>
+    </div>
+    <div class="math-card">
+      <h3>The Math</h3>
+      <div class="math-row"><span class="k">Accounts per person today</span><span class="v">15–25</span></div>
+      <div class="math-row"><span class="k">Accounts per person on StayGreen</span><span class="v up">50–75</span></div>
+      <div class="math-row"><span class="k">Your price to clients</span><span class="v">Unchanged</span></div>
+      <div class="math-row"><span class="k">Platform cost</span><span class="v">$99–149 /contractor/mo</span></div>
+      <div class="math-row"><span class="k">Margin per account</span><span class="v up">~2–3× — hours decoupled</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" id="contact">
+  <div class="container">
+    <h2>Ready to <span class="grad-text-green">Stay Green?</span></h2>
+    <p>Book a 20-minute demo. Bring your messiest training cert photo and your latest COI — we'll parse them live.</p>
+    <a href="mailto:larry@empowerbuilding.ai?subject=StayGreen%20Demo%20Request" class="btn btn-green" style="font-size:1.05rem;padding:16px 40px">Book a Demo</a>
+    <p style="margin-top:22px;font-size:.9rem;color:var(--muted)">or email <a href="mailto:larry@empowerbuilding.ai">larry@empowerbuilding.ai</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container foot-inner">
+    <div class="wordmark" style="font-size:1.1rem"><span class="grad-text-blue">Stay</span><span class="grad-text-green">Green</span> <span style="color:var(--blue)">Compliance</span></div>
+    <div class="small">ISNetworld® and ISN® are registered trademarks of ISN Software Corporation. StayGreen is an independent service and is not affiliated with or endorsed by ISN Software Corporation.</div>
+    <div class="small">© 2026 StayGreen Compliance</div>
+  </div>
+</footer>
+
+</body>
+</html>
