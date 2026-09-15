@@ -57,10 +57,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(11,21,30,.92);backdrop-fil
 .hero p.lede{font-size:1.15rem;color:var(--muted);max-width:540px;margin-bottom:32px}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:34px}
 .hero-logo{position:relative}
-.hero-logo img{display:block;width:118%;max-width:none;height:auto;margin-left:-9%;
-  -webkit-mask-image:radial-gradient(ellipse 62% 58% at 50% 50%,#000 40%,transparent 74%);
-  mask-image:radial-gradient(ellipse 62% 58% at 50% 50%,#000 40%,transparent 74%);
-  filter:drop-shadow(0 18px 40px rgba(0,0,0,.45))}
+.hero-logo img{display:block;width:100%;height:auto;filter:drop-shadow(0 18px 40px rgba(0,0,0,.45))}
 .trust-line{font-size:.85rem;color:var(--muted)}
 .trust-line strong{color:var(--text)}
 
@@ -182,10 +179,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
   .hero-grid{gap:8px}
   .hero h1{font-size:2.5rem}
   .hero p.lede{font-size:1.02rem}
-  .hero-logo{max-width:100%;margin:0 auto}
-  .hero-logo img{width:100%;margin-left:0;
-    -webkit-mask-image:radial-gradient(ellipse 58% 52% at 50% 50%,#000 38%,transparent 72%);
-    mask-image:radial-gradient(ellipse 58% 52% at 50% 50%,#000 38%,transparent 72%)}
+  .hero-logo{order:-1;max-width:280px;margin:0 auto 10px}
   .section-head{margin-bottom:36px}
   .compare th,.compare td{padding:12px 12px;font-size:.82rem}
   .compare th{font-size:.95rem}
@@ -225,7 +219,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
       <p class="trust-line">Your job shrinks to two things: <strong>forward documents</strong> and <strong>click approve</strong>. We do the rest.</p>
     </div>
     <div class="hero-logo">
-      <img src="assets/staygreen-logo.jpg" alt="StayGreen Compliance — AI Powered Solutions">
+      <img src="assets/staygreen-logo-fade.png" alt="StayGreen Compliance — AI Powered Solutions">
     </div>
   </div>
 </header>
