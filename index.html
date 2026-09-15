@@ -26,7 +26,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--navy-deep);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',sans-serif;background:var(--navy-deep);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 h1,h2,h3,.wordmark{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
 a{color:var(--blue);text-decoration:none}
 .container{max-width:1140px;margin:0 auto;padding:0 24px}
@@ -169,11 +169,31 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
 @media(max-width:900px){
   .hero-grid,.consult-grid,.guarantee-inner{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
-  .stat{border-bottom:1px solid var(--card-border)}
+  .stat{border-right:none;border-bottom:1px solid var(--card-border);padding:26px 14px}
+  .stat:nth-child(odd){border-right:1px solid var(--card-border)}
+  .stat:nth-child(3),.stat:nth-child(4){border-bottom:none}
+  .stat .num{font-size:2.1rem}
   .pain-grid,.steps,.engine-grid{grid-template-columns:1fr}
   .nav-links a:not(.btn){display:none}
-  .hero{padding:56px 0}
-  .hero-logo{max-width:480px}
+  .wordmark{font-size:1.2rem}
+  .wordmark .sub{letter-spacing:.3em}
+  section{padding:60px 0}
+  .hero{padding:48px 0 8px}
+  .hero-grid{gap:8px}
+  .hero h1{font-size:2.5rem}
+  .hero p.lede{font-size:1.02rem}
+  .hero-logo{max-width:100%;margin:0 auto}
+  .hero-logo img{width:100%;margin-left:0;
+    -webkit-mask-image:radial-gradient(ellipse 58% 52% at 50% 50%,#000 38%,transparent 72%);
+    mask-image:radial-gradient(ellipse 58% 52% at 50% 50%,#000 38%,transparent 72%)}
+  .section-head{margin-bottom:36px}
+  .compare th,.compare td{padding:12px 12px;font-size:.82rem}
+  .compare th{font-size:.95rem}
+  .guarantee-inner{text-align:center;gap:14px}
+  .shield{font-size:3rem}
+  .price-card{padding:36px 24px}
+  .consult-grid{gap:32px}
+  .foot-inner{flex-direction:column;text-align:center}
 }
 </style>
 </head>
