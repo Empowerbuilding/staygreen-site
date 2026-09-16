@@ -1,0 +1,19 @@
+# StayGreen Compliance
+
+> StayGreen is an AI-powered compliance management service for oil & gas contractors. An AI agent monitors the contractor's ISNetworld account daily, reads training certificates from phone photos, tracks insurance (COI) endorsement requirements, manages RAVS safety program submissions, and alerts the contractor before anything turns red — so crews are never turned away at the gate over paperwork.
+
+## What StayGreen does
+- Daily monitoring of ISNetworld action items, grades, and expiring requirements
+- AI parsing of training qualification (TQ) certificates — SafeLand, H2S, OSHA 10/30, First Aid/CPR, operator-specific orientations — from photos or PDFs
+- Certificate-of-insurance (COI) tracking: limits, Additional Insured, Waiver of Subrogation, Primary & Non-Contributory wording; auto-drafted broker request emails
+- RAVS safety program tracking and drafting
+- Same-day alerts when an operator (Devon, Oxy, Chevron, ConocoPhillips, and others) adds or changes requirements
+
+## Who it's for
+Small and mid-size oil & gas contractors — compression, roustabout, wireline, hauling, welding crews — who must stay compliant in ISNetworld, Veriforce, or Avetta to work for operators, and who don't have a full-time compliance department.
+
+## Key facts
+- Website: https://staygreencompliance.ai
+- Portal: https://app.staygreencompliance.ai
+- Service area: Permian Basin, Texas, New Mexico, Oklahoma, and US-wide
+- Alternative to: manual ISN data-entry consultants ($200–800/mo human services)
