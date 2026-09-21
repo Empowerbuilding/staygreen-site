@@ -240,8 +240,10 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
   .hero p.lede{font-size:1.02rem}
   .eyebrow{font-size:.68rem;letter-spacing:.12em;padding:6px 12px}
   .section-head{margin-bottom:36px}
-  .compare th,.compare td{padding:12px 12px;font-size:.82rem}
-  .compare th{font-size:.95rem}
+  .compare-wrap{overflow-x:visible}
+  table.compare{table-layout:fixed;width:100%}
+  .compare th,.compare td{padding:10px 6px;font-size:.72rem;overflow-wrap:break-word}
+  .compare th{font-size:.8rem;padding:12px 6px}
   .guarantee-inner{text-align:center;gap:14px}
   .shield{font-size:3rem}
   .price-card{padding:36px 24px}
@@ -354,7 +356,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
     <div class="section-head">
       <span class="kicker">The Engines</span>
       <h2>A Full Compliance Department, <span class="grad-text-green">Running 24/7</span></h2>
-      <p>Four AI engines cover the work that eats 40 hours a month — verified on real contractor documents.</p>
+      <p>Three AI engines cover the work that eats 40 hours a month — verified on real contractor documents.</p>
     </div>
     <div class="engine-grid">
       <div class="engine">
@@ -369,17 +371,11 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
         <p>Ingests the operator's requirement rubric, drafts the compliant safety program, and when a reviewer rejects it, parses the feedback and redrafts point-by-point. The rejection loop ends.</p>
         <p class="kills">Kills 25% of your ISN workload</p>
       </div>
-      <div class="engine">
+      <div class="engine" style="grid-column:1/-1">
         <span class="tag tag-green">Live</span>
         <h3>🛡️ Insurance Watchdog</h3>
         <p>Reads ACORD COIs including the endorsement pages. Catches missing waiver-of-subrogation and primary-&-non-contributory wording <em>before</em> your portal bounces it — and drafts the exact request email for your broker.</p>
         <p class="kills">Kills 15% of your portal workload</p>
-      </div>
-      <div class="engine">
-        <span class="tag tag-soon">Coming Soon</span>
-        <h3>🔄 Portal Sync</h3>
-        <p>StayGreen submits directly to your portals — ISN, Veriforce, or Avetta — as your authorized user: uploads training packets, files programs and quarterly stats, and watches the message center so a requirement change never blindsides you. You approve every submission first.</p>
-        <p class="kills">Nobody else in the market does this</p>
       </div>
     </div>
   </div>
