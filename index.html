@@ -522,7 +522,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
       <button type="submit" class="btn btn-green">Book a Demo</button>
       <div class="form-sent" id="form-sent">✓ Opening your email app — hit send and we'll get right back to you.</div>
     </form>
-    <p style="margin-top:22px;font-size:.9rem;color:var(--muted)">or email <a href="mailto:larry@empowerbuilding.ai">larry@empowerbuilding.ai</a> directly</p>
+    <p style="margin-top:22px;font-size:.9rem;color:var(--muted)">or email <a href="mailto:larry@staygreencompliance.ai">larry@staygreencompliance.ai</a> directly</p>
     <script>
     document.getElementById('demo-form').addEventListener('submit',function(e){
       e.preventDefault();
@@ -530,7 +530,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
       var body='Name: '+f.name.value+'\nCompany: '+(f.company.value||'-')+'\nEmail: '+f.email.value+'\nPhone: '+(f.phone.value||'-')+'\n\n'+f.message.value;
       var subj='StayGreen Demo Request — '+f.name.value+(f.company.value?' ('+f.company.value+')':'');
       document.getElementById('form-sent').style.display='block';
-      window.location.href='mailto:larry@empowerbuilding.ai?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+      window.location.href='mailto:larry@staygreencompliance.ai?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
     });
     </script>
   </div>
