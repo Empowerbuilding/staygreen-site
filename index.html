@@ -125,8 +125,9 @@ section{padding:88px 0}
 /* PAIN */
 .pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
 .pain-card{background:var(--card);border:1px solid var(--card-border);border-radius:14px;padding:30px}
-.pain-card .icon{width:52px;height:52px;border-radius:12px;background:rgba(61,187,46,.1);border:1px solid rgba(61,187,46,.22);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:16px;color:var(--green)}
-.pain-card .icon svg{display:block}
+.pain-card .icon,.engine .icon{width:52px;height:52px;border-radius:12px;background:rgba(61,187,46,.1);border:1px solid rgba(61,187,46,.22);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:16px;color:var(--green)}
+.pain-card .icon svg,.engine .icon svg,.shield svg{display:block}
+.engine .icon{margin-bottom:14px}
 .pain-card h3{font-size:1.3rem;margin-bottom:10px;color:var(--text)}
 .pain-card p{color:var(--muted);font-size:.95rem}
 
@@ -268,6 +269,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
   .compare th{font-size:.8rem;padding:12px 6px}
   .guarantee-inner{text-align:center;gap:14px}
   .shield{font-size:3rem}
+  .shield svg{width:52px;height:52px;margin:0 auto}
   .price-card{padding:36px 24px}
   .consult-grid{gap:32px}
   .foot-inner{flex-direction:column;text-align:center}
@@ -422,25 +424,29 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
     <div class="engine-grid">
       <div class="engine">
         <span class="tag tag-green">Live</span>
-        <h3>📸 Training & TQ Engine</h3>
+        <span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span>
+        <h3>Training & TQ Engine</h3>
         <p>Photo, PDF, or sign-in sheet in → worker, course, and dates extracted, matched to your roster, and mapped against each operator's TQ matrix. Every rolling expiry tracked with alerts at 60/30/7 days. No more typing certs one at a time.</p>
         <p class="kills">Kills 45% of your portal workload</p>
       </div>
       <div class="engine">
         <span class="tag tag-green">Live</span>
-        <h3>📝 RAVS Program Writer</h3>
+        <span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>
+        <h3>RAVS Program Writer</h3>
         <p>Ingests the operator's requirement rubric, drafts the compliant safety program, and when a reviewer rejects it, parses the feedback and redrafts point-by-point. The rejection loop ends.</p>
         <p class="kills">Kills 25% of your ISN workload</p>
       </div>
       <div class="engine">
         <span class="tag tag-green">Live</span>
-        <h3>🛡️ Insurance Watchdog</h3>
+        <span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <h3>Insurance Watchdog</h3>
         <p>Reads ACORD COIs including the endorsement pages. Catches missing waiver-of-subrogation and primary-&-non-contributory wording <em>before</em> your portal bounces it — and drafts the exact request email for your broker.</p>
         <p class="kills">Kills 15% of your portal workload</p>
       </div>
       <div class="engine">
         <span class="tag tag-green">Live</span>
-        <h3>💬 Conversational Compliance Chat</h3>
+        <span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+        <h3>Conversational Compliance Chat</h3>
         <p>No tabs, no reports, no training. Ask <em>"Who is clear for Devon Energy?"</em> and get an instant, plain-English answer — with the exact next step to fix whatever's red. Your whole compliance department, one chat away.</p>
         <p class="kills">Zero learning curve</p>
       </div>
@@ -472,7 +478,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
 <div class="guarantee">
   <section style="padding:72px 0">
     <div class="container guarantee-inner">
-      <div class="shield">🛡️</div>
+      <div class="shield" style="color:var(--green)"><svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
       <div>
         <h2>You're Not Buying Software.<br>You're Buying <span class="grad-text-green">Revenue Insurance.</span></h2>
         <p>A single admin oversight can silently knock you off an operator's call-out list. One prevented gate lockout — one won bid — pays for years of StayGreen. <strong>We keep every admin item green: certs, documents, deadlines, and submissions.</strong> So you never miss a bid or a dispatch.</p>
