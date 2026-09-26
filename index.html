@@ -203,6 +203,14 @@ table.compare{width:100%;border-collapse:collapse;background:var(--card);border:
 .math-row:last-child{border-bottom:none}
 .math-row .k{color:var(--muted)} .math-row .v{font-weight:600}
 .math-row .v.up{color:var(--green)}
+.do-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0 28px}
+.do-card{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:18px 20px}
+.do-card h4{font-size:.78rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+.do-card.you h4{color:var(--text)}
+.consult .do-card ul{margin:0}
+.consult .do-card li{padding:6px 0 6px 26px;font-size:.9rem}
+.consult .do-card li::before{top:7px;width:18px;height:18px;font-size:.68rem}
+.math-note{font-size:.85rem;color:var(--muted);margin-top:16px}
 
 /* PRICING */
 .tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
@@ -234,7 +242,7 @@ table.compare{width:100%;border-collapse:collapse;background:var(--card);border:
 .contact-form textarea{resize:vertical}
 .contact-form .btn{width:100%;text-align:center}
 .form-sent{display:none;color:var(--green-light);font-weight:600;text-align:center;padding:6px 0}
-@media(max-width:600px){.form-row{grid-template-columns:1fr}}
+@media(max-width:600px){.form-row{grid-template-columns:1fr}.do-cols{grid-template-columns:1fr}}
 
 /* FOOTER */
 footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--navy-deep)}
@@ -540,14 +548,26 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
     <div>
       <span class="kicker">For Compliance Consultants</span>
       <h2>Triple Your Client Load. Same Team.</h2>
-      <p>You're capped because every account costs hours — scanning certs, rewriting RAVS programs, chasing brokers. StayGreen is the white-label AI back office that does the data entry while <strong style="color:var(--text)">you stay the expert and own the relationship.</strong></p>
-      <ul>
-        <li>White-label — your brand, your clients never see us</li>
-        <li>Contractual no-solicitation, both directions, in writing</li>
-        <li>Human-in-the-loop: you approve every client-facing item</li>
-        <li>Confidence-gated AI — anything uncertain routes to review, not to your portal</li>
-        <li>Founding partner rates locked for the first firms in</li>
-      </ul>
+      <p>StayGreen is a white-label AI back office. It does the paperwork hours behind every account — <strong style="color:var(--text)">you stay the expert and own the relationship.</strong></p>
+      <div class="do-cols">
+        <div class="do-card">
+          <h4>StayGreen does</h4>
+          <ul>
+            <li>Reads training certs &amp; COIs from a photo</li>
+            <li>Tracks every expiration date</li>
+            <li>Drafts RAVS safety programs</li>
+            <li>Preps portal-ready upload packets</li>
+          </ul>
+        </div>
+        <div class="do-card you">
+          <h4>You still do</h4>
+          <ul>
+            <li>Approve everything before clients see it</li>
+            <li>Submit to ISN / Veriforce / Avetta</li>
+            <li>Own the client relationship</li>
+          </ul>
+        </div>
+      </div>
       <a href="#contact" class="btn btn-outline">Ask About Founding Partnership</a>
     </div>
     <div class="math-card">
@@ -555,8 +575,8 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
       <div class="math-row"><span class="k">Accounts per person today</span><span class="v">15–25</span></div>
       <div class="math-row"><span class="k">Accounts per person on StayGreen</span><span class="v up">50–75</span></div>
       <div class="math-row"><span class="k">Your price to clients</span><span class="v">Unchanged</span></div>
-      <div class="math-row"><span class="k">Platform cost</span><span class="v">Custom per-contractor rate — scaled to your book</span></div>
-      <div class="math-row"><span class="k">Margin per account</span><span class="v up">Hours decoupled from revenue</span></div>
+      <div class="math-row"><span class="k">Platform cost</span><span class="v">Custom per-contractor rate</span></div>
+      <p class="math-note">White-label with a written no-solicitation agreement, both directions — your clients never see us.</p>
     </div>
   </div>
 </section>
