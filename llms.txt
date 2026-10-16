@@ -1,6 +1,6 @@
 # StayGreen Compliance
 
-> StayGreen is contractor risk management for independent oil & gas producers. Every contractor and subcontractor is verified at two levels — company level (signed MSA, COIs read word-by-word for additional insured and waiver-of-subrogation wording, W-9, EMR) and worker level (H2S, DISA, and every other required training card, checked on every hand before anyone rolls). Work orders build the crew, crews stage from a text link with no vendor logins, and every tailgate is signed on the phone with time and GPS — producing a signed JSA, site manifest, and closeout packet retained 7+ years and ready when an auditor or an attorney asks.
+> StayGreen is contractor risk management for independent oil & gas producers. Every contractor and subcontractor is verified at two levels — company level (signed MSA, COIs read word-by-word for additional insured and waiver-of-subrogation wording, W-9, EMR) and worker level (H2S, DISA, and every other required training card, checked on every hand before anyone rolls). Work orders build the crew, crews stage from a text link with no vendor logins, and every tailgate is signed on the phone with time and GPS — producing a signed JSA, site manifest, and closeout packet retained 7+ years and audit-ready.
 
 ## What StayGreen does
 - Two-level contractor verification for producers: company paperwork (MSA, COI wording, W-9, EMR) and worker training (H2S, DISA, OSHA 10, PEC SafeLand, operator site orientation)
