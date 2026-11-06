@@ -1,8 +1,9 @@
 # StayGreen Compliance
 
-> StayGreen is an AI-powered compliance management service for oil & gas contractors, covering ISNetworld, Veriforce, and Avetta in one dashboard. An AI agent monitors the contractor's compliance portals daily, reads training certificates from phone photos, tracks insurance (COI) endorsement requirements, manages safety program submissions (including ISN RAVS), and alerts the contractor before anything turns red — so crews are never turned away at the gate over paperwork.
+> StayGreen is an AI-powered procedure management and compliance service for oil & gas operators and contractors. For operators: photograph a paper field JSA and the AI reads the scope, steps, hazards, and sign-in block, matches every step to the operator's governing procedure, and collects each crew member's acknowledgment from their own phone — stamped with time and GPS — into one audit-ready closeout record (pre-work constraints, post-work verifications, per-hand per-revision acknowledgment history). For contractors: ISNetworld, Veriforce, and Avetta compliance in one dashboard, with an AI agent that monitors portals daily, reads training certificates from phone photos, tracks COI endorsement requirements, and alerts before anything turns red.
 
 ## What StayGreen does
+- Operator procedure management: procedure library built from the operator's catalog (codes, revisions, keywords); paper JSA capture with AI step-to-procedure matching; per-hand acknowledgment links (text, email, QR) with time and GPS; offline procedure copies for no-service pads; closeout records and searchable job history
 - Daily monitoring of portal action items, grades, and expiring requirements across ISNetworld, Veriforce, and Avetta
 - AI parsing of training qualification (TQ) certificates — SafeLand, H2S, OSHA 10/30, First Aid/CPR, operator-specific orientations — from photos or PDFs
 - Certificate-of-insurance (COI) tracking: limits, Additional Insured, Waiver of Subrogation, Primary & Non-Contributory wording; auto-drafted broker request emails
@@ -10,10 +11,9 @@
 - Same-day alerts when an operator (Devon, Oxy, Chevron, ConocoPhillips, and others) adds or changes requirements
 
 ## Who it's for
-Small and mid-size oil & gas contractors — compression, roustabout, wireline, hauling, welding crews — who must stay compliant in ISNetworld, Veriforce, or Avetta to work for operators, and who don't have a full-time compliance department.
+Oil & gas operators (E&P, midstream, production) who need field evidence that crews worked to their own procedures — and small and mid-size contractors (compression, roustabout, wireline, hauling, welding) who must stay compliant in ISNetworld, Veriforce, or Avetta without a full-time compliance department. The website defaults to the operator view; a contractor tab carries the contractor story.
 
 ## Key facts
-- Website: https://staygreencompliance.ai
+- Website: https://staygreencompliance.ai (operator tab default; #contractors deep-links the contractor view)
 - Portal: https://app.staygreencompliance.ai
 - Service area: Permian Basin, Texas, New Mexico, Oklahoma, and US-wide
-- Alternative to: manual portal data-entry consultants ($200–800/mo human services, per portal)

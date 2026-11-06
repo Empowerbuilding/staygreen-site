@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StayGreen — AI Compliance Management for ISNetworld, Veriforce & Avetta</title>
-<meta name="description" content="StayGreen is your AI compliance agent for oil & gas contractors. Training qualifications (TQ), safety programs, insurance docs, and quarterly stats — read, tracked, and kept 100% green across ISNetworld, Veriforce, and Avetta, so you never lose a bid or a dispatch to a red light.">
+<title>StayGreen — Operator Procedure Management & Field JSA Evidence</title>
+<meta name="description" content="StayGreen is procedure management for oil & gas operators. Photograph the paper JSA — the AI matches every step to your governing procedure, and every hand acknowledges from their own phone, stamped with time and GPS. One closeout record that answers any audit. Contractor compliance for ISNetworld, Veriforce, and Avetta lives on the contractor tab.">
 <link rel="canonical" href="https://staygreencompliance.ai/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0b151e">
@@ -12,15 +12,15 @@
 <link rel="apple-touch-icon" href="/assets/favicon-v2.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="StayGreen Compliance">
-<meta property="og:title" content="StayGreen — AI Compliance Management for ISNetworld, Veriforce & Avetta">
-<meta property="og:description" content="AI-powered compliance management across ISNetworld, Veriforce, and Avetta for oil & gas contractors. TQ certs, safety programs, COIs, and quarterly stats — tracked in one dashboard and kept green so your crews never get turned away at the gate.">
+<meta property="og:title" content="StayGreen — Operator Procedure Management & Field JSA Evidence">
+<meta property="og:description" content="Procedure management for oil & gas operators: photograph the paper JSA, AI matches every step to your governing procedure, every hand acknowledges from their phone with time and GPS — one audit-ready closeout record.">
 <meta property="og:url" content="https://staygreencompliance.ai/">
 <meta property="og:image" content="https://staygreencompliance.ai/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="StayGreen — AI Compliance Management for ISNetworld, Veriforce & Avetta">
-<meta name="twitter:description" content="One AI-powered compliance dashboard across ISNetworld, Veriforce, and Avetta. Stay 100% green — never lose a dispatch to a red light.">
+<meta name="twitter:title" content="StayGreen — Operator Procedure Management & Field JSA Evidence">
+<meta name="twitter:description" content="Your procedures. Every hand. Proven. — paper JSA to audit-ready record for oil & gas operators.">
 <meta name="twitter:image" content="https://staygreencompliance.ai/assets/og-image.jpg">
 <script type="application/ld+json">
 {
@@ -32,16 +32,16 @@
       "name": "StayGreen Compliance",
       "url": "https://staygreencompliance.ai/",
       "logo": "https://staygreencompliance.ai/assets/og-image.jpg",
-      "description": "AI-powered compliance management service for oil and gas contractors across ISNetworld, Veriforce, and Avetta.",
+      "description": "AI-powered procedure management and compliance service for oil and gas operators and contractors.",
       "areaServed": ["Permian Basin", "Texas", "New Mexico", "Oklahoma", "United States"]
     },
     {
       "@type": "Service",
       "@id": "https://staygreencompliance.ai/#service",
-      "name": "StayGreen — AI Compliance Management for ISNetworld, Veriforce & Avetta",
+      "name": "StayGreen — Operator Procedure Management & Field JSA Evidence",
       "provider": { "@id": "https://staygreencompliance.ai/#org" },
-      "serviceType": "Contractor compliance management (ISNetworld, Veriforce, Avetta)",
-      "description": "Done-for-you contractor compliance: an AI agent monitors your compliance portals daily — ISNetworld, Veriforce, and Avetta — parses training certificates from phone photos, tracks COI insurance requirements and safety programs, and alerts you before anything turns red.",
+      "serviceType": "Operator procedure management and field JSA compliance",
+      "description": "Photograph a paper JSA and the AI matches every step to the operator's governing procedure; every crew member acknowledges from their own phone, stamped with time and GPS, and the closeout record is audit-ready. Contractor compliance management (ISNetworld, Veriforce, Avetta) is available on the contractor tab.",
       "areaServed": "United States",
       "audience": { "@type": "Audience", "audienceType": "Oil and gas contractors" }
     }
@@ -252,6 +252,18 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
 .foot-links a{color:var(--muted)}
 .foot-links a:hover{color:var(--text)}
 
+/* AUDIENCE TABS (Larry 2026-11-06: one tab for operators — the homepage — one for contractors) */
+.tabstrip{background:var(--navy-deep);border-bottom:1px solid var(--card-border);padding:12px 0}
+.tabwrap{display:flex;gap:10px;justify-content:center}
+.tabbtn{font-family:'Inter',sans-serif;font-size:.88rem;font-weight:700;padding:9px 22px;border-radius:99px;border:1px solid var(--card-border);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s}
+.tabbtn:hover{color:var(--text)}
+.tabbtn.active{background:linear-gradient(180deg,var(--green-light),var(--green));color:#06220a;border-color:transparent;box-shadow:0 4px 18px rgba(61,187,46,.3)}
+body.v-operators .ctab{display:none}
+body.v-contractors .otab{display:none}
+.onav,.cnav{display:flex;gap:28px;align-items:center}
+body.v-operators .cnav{display:none}
+body.v-contractors .onav{display:none}
+
 @media(max-width:900px){
   .hero-grid,.consult-grid,.guarantee-inner{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
@@ -290,19 +302,142 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
   <div class="container nav-inner">
     <a href="#"><img class="nav-logo" src="assets/staygreen-logo-v4.png" alt="StayGreen Compliance — AI Powered Solutions"></a>
     <div class="nav-links">
-      <a href="#problem">Problem</a>
-      <a href="#how">How It Works</a>
-      <a href="#subs">Subs</a>
-      <a href="#wo-jsa">JSA</a>
-      <a href="#engines">Engines</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#consultants">Consultants</a>
+      <span class="onav"><a href="#o-gap">The Gap</a><a href="#o-how">How It Works</a><a href="#o-evidence">Evidence</a><a href="#o-engines">Engines</a></span>
+      <span class="cnav"><a href="#problem">Problem</a><a href="#how">How It Works</a><a href="#subs">Subs</a><a href="#wo-jsa">JSA</a><a href="#engines">Engines</a></span>
       <a href="#contact" class="btn btn-green">Book a Demo</a>
     </div>
   </div>
 </nav>
 
-<header class="hero">
+<!-- (Larry 2026-11-06 21:45: one tab for operators — the DEFAULT — one for contractors; pricing off both, consultants cut, no OQ) -->
+<div class="tabstrip">
+  <div class="container tabwrap">
+    <button class="tabbtn active" id="tab-operators" type="button">For Operators</button>
+    <button class="tabbtn" id="tab-contractors" type="button">For Contractors</button>
+  </div>
+</div>
+
+<header class="hero otab">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">⬤ Operator Procedure Management</span>
+      <h1>Your Procedures.<br>Every Hand. <span class="grad-text-green">Proven.</span></h1>
+      <p class="lede">Photograph the paper JSA at the tailgate — StayGreen reads it, matches every step to your governing procedure, and collects each hand's acknowledgment from their own phone, stamped with time and GPS. <strong style="color:var(--green)">One closeout record that answers any audit.</strong></p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-green">Book a Demo</a>
+        <a href="#o-how" class="btn btn-outline">See How It Works</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="stats-band otab">
+  <div class="container stats-grid">
+    <div class="stat"><div class="num green">35</div><div class="label">procedures live in the first operator's library</div></div>
+    <div class="stat"><div class="num green">4 of 5</div><div class="label">JSA steps auto-matched to their governing procedure</div></div>
+    <div class="stat"><div class="num">Time + GPS</div><div class="label">stamped on every hand's acknowledgment</div></div>
+    <div class="stat"><div class="num green">0</div><div class="label">app downloads — every hand works from their own phone</div></div>
+  </div>
+</div>
+
+<section id="o-gap" class="otab">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">The Problem</span>
+      <h2>The Qualification <span class="grad-text-green">Gap.</span></h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card"><span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span><h3>Generic Cards, Not Your Procedures</h3><p>Third-party qualification programs test covered tasks — never your own O&amp;M procedures. When an auditor asks whether Tuesday's crew worked to your lockout procedure, generic cards have nothing to say.</p></div>
+      <div class="pain-card"><span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><h3>The Clipboard Proves Nothing</h3><p>A paper JSA says the crew was briefed. It doesn't say which procedure revision governed the work, who read it, or whether anyone re-acknowledged after the last revision.</p></div>
+      <div class="pain-card" style="grid-column:1/-1"><span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><h3>The 7 AM Spot Check</h3><p>An auditor rolls up unannounced and asks for the JSA and the procedures it was worked to. One's in a truck three miles away, the other's a shrug. Your pad sits down waiting on paper.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="o-how" class="otab">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">How It Works</span>
+      <h2>Load. Match. <span class="grad-text-green">Acknowledge.</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Load Your Procedures</h3><p>Send your procedure catalog; we build the library — codes, revisions, keywords — so every reference on a JSA resolves to the real document. First deployment: a 30-procedure catalog became a live library in a day.</p></div>
+      <div class="step"><div class="n">2</div><h3>Photograph the JSA</h3><p>The crew's paper sheet, photographed once. The AI reads the scope, steps, hazards, and sign-in block, then matches each step to its governing procedure — a spec number printed on the sheet hits outright; plain field language matches by meaning. Borderline calls wait for your one-tap confirm — never guessed.</p></div>
+      <div class="step"><div class="n">3</div><h3>Every Hand Acknowledges</h3><p>Each crew member gets their own link — text, email, or QR at the tailgate. They tap through their procedure set on their phone; StayGreen stamps the time and GPS. No service on the pad? Offline copies save to the phone ahead of time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="o-evidence" class="otab">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">The Evidence</span>
+      <h2>What the Auditor <span class="grad-text-green">Gets.</span></h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card"><span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Per-Hand, Per-Revision</h3><p>Who acknowledged which procedure, which revision, when, and where — frozen at closeout.</p></div>
+      <div class="pain-card"><span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><h3>Gates</h3><p>Pre-work constraints and post-work verifications per procedure, checked off by the crew as the job runs.</p></div>
+      <div class="pain-card"><span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span><h3>The Closeout Packet</h3><p>The JSA, the matched procedures, every acknowledgment — one PDF for the audit file or the payment release.</p></div>
+      <div class="pain-card"><span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span><h3>History</h3><p>Every job's records on file and searchable, ready the moment anyone asks.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="o-onboard" class="otab" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Onboarding</span>
+      <h2>Plug-and-Play, <span class="grad-text-green">Day One.</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Catalog In</h3><p>Your procedures become the library on day one — codes, revisions, and keywords, matched against every JSA that follows.</p></div>
+      <div class="step"><div class="n">2</div><h3>First Sheet</h3><p>Photograph a JSA from a live job and watch it match — the read, the picks, and the acknowledgment links, all in minutes.</p></div>
+      <div class="step"><div class="n">3</div><h3>Your Console</h3><p>Primes, crews, manifests, and records in one place — your jobs, your procedures, your evidence.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="engines otab" id="o-engines">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">The Engines</span>
+      <h2>Three Engines. <span class="grad-text-green">One Record.</span></h2>
+    </div>
+    <div class="engine-grid">
+      <div class="engine">
+        <span class="tag tag-green">Live</span>
+        <span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
+        <h3>Procedure &amp; JSA Engine</h3>
+        <p>Reads the sheet, matches the steps, freezes the record. Photograph a paper JSA and get back a matched, acknowledged, audit-ready record.</p>
+        <p class="kills">Photograph once — the record builds itself</p>
+      </div>
+      <div class="engine">
+        <span class="tag tag-green">Live</span>
+        <span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <h3>Crew Clearance Engine</h3>
+        <p>Every hand on your pad checked before the truck rolls — training cards current, red hands blocked at sign-in with the missing card named.</p>
+        <p class="kills">Red hands never reach the pad</p>
+      </div>
+      <div class="engine">
+        <span class="tag tag-green">Live</span>
+        <span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+        <h3>Conversational Compliance Chat</h3>
+        <p>Ask anything — <em>"who hasn't acknowledged the pigging procedure?"</em> — answered from live records at any hour.</p>
+        <p class="kills">Zero learning curve</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="otab" style="padding:72px 0">
+  <div class="container" style="text-align:center;max-width:760px">
+    <span class="kicker">The StayGreen Record</span>
+    <h2 style="font-size:clamp(2rem,4vw,2.9rem)">Evidence, Not <span class="grad-text-green">Excuses.</span></h2>
+    <p style="color:var(--muted);margin-top:12px">One audit that ends in a handshake instead of a finding — the JSA, the procedures, and every acknowledgment in one record.</p>
+  </div>
+</section>
+
+<header class="hero ctab">
   <div class="container hero-grid">
     <div>
       <span class="eyebrow">⬤ ISN® · Veriforce® · Avetta® Compliance</span>
@@ -316,7 +451,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
   </div>
 </header>
 
-<div class="stats-band">
+<div class="stats-band ctab">
   <div class="container stats-grid">
     <div class="stat"><div class="num red">30–40%</div><div class="label">of contractors are red with at least one operator right now</div></div>
     <div class="stat"><div class="num">40 hrs</div><div class="label">per month of portal admin work for a mid-sized contractor</div></div>
@@ -325,7 +460,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
   </div>
 </div>
 
-<section id="problem" style="padding-bottom:0">
+<section id="problem" class="ctab" style="padding-bottom:0">
   <div class="container">
     <div class="section-head">
       <span class="kicker">The Problem</span>
@@ -345,7 +480,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
 </section>
 
 
-<section id="how">
+<section id="how" class="ctab">
   <div class="container">
     <div class="section-head">
       <span class="kicker">How It Works</span>
@@ -360,7 +495,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
   </div>
 </section>
 
-<section id="chat" style="padding-top:0">
+<section id="chat" class="ctab" style="padding-top:0">
   <div class="container">
     <div class="section-head">
       <span class="kicker">The Interface</span>
@@ -384,7 +519,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
   </div>
 </section>
 
-<section id="subs">
+<section id="subs" class="ctab">
   <div class="container">
     <div class="section-head">
       <span class="kicker">Subcontractor Management</span>
@@ -399,7 +534,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
   </div>
 </section>
 
-<section id="wo-jsa">
+<section id="wo-jsa" class="ctab">
   <div class="container">
     <div class="section-head">
       <span class="kicker">Work Orders &amp; JSA</span>
@@ -422,7 +557,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
   </div>
 </section>
 
-<section id="onboarding" style="padding-top:0">
+<section id="onboarding" class="ctab" style="padding-top:0">
   <div class="container">
     <div class="section-head">
       <span class="kicker">Onboarding</span>
@@ -437,7 +572,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
   </div>
 </section>
 
-<section class="engines" id="engines">
+<section class="engines ctab" id="engines">
   <div class="container">
     <div class="section-head">
       <span class="kicker">The Engines</span>
@@ -477,7 +612,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
   </div>
 </section>
 
-<section>
+<section class="ctab">
   <div class="container">
     <div class="section-head">
       <span class="kicker">Why StayGreen</span>
@@ -491,7 +626,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
   </div>
 </section>
 
-<div class="guarantee">
+<div class="guarantee ctab">
   <section style="padding:72px 0">
     <div class="container guarantee-inner">
       <div class="shield" style="color:var(--green)"><svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
@@ -503,112 +638,10 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
   </section>
 </div>
 
-<section id="pricing">
-  <div class="container">
-    <div class="section-head">
-      <span class="kicker">Pricing</span>
-      <h2>Priced by <span class="grad-text-green">Headcount.</span></h2>
-      <p>TQ pain scales with crew size — so does your price. Every tier includes a live dashboard and human approval on everything.</p>
-    </div>
-    <div class="tiers">
-      <div class="tier">
-        <div class="plan">Starter</div>
-        <div class="price">$199<span>/mo</span></div>
-        <div class="size">1–25 active workers</div>
-        <ul>
-          <li>Training & TQ engine</li>
-          <li>1 portal sync (ISN or Veriforce)</li>
-          <li>SMS & email document ingest</li>
-          <li>60/30/7-day expiration alerts</li>
-          <li>Live compliance dashboard</li>
-        </ul>
-        <a href="#contact" class="btn btn-outline" style="width:100%;text-align:center">Book a Demo</a>
-      </div>
-      <div class="tier popular">
-        <div class="badge">Most Popular</div>
-        <div class="plan">Growth</div>
-        <div class="price">$399<span>/mo</span></div>
-        <div class="size">26–100 active workers</div>
-        <ul>
-          <li>Everything in Starter</li>
-          <li>Multi-portal sync (ISN + Veriforce + Avetta)</li>
-          <li>RAVS Program Writer</li>
-          <li>Insurance Watchdog</li>
-          <li>Priority processing queue</li>
-        </ul>
-        <a href="#contact" class="btn btn-green" style="width:100%;text-align:center">Book a Demo</a>
-      </div>
-      <div class="tier">
-        <div class="plan">Pro / Scale</div>
-        <div class="price">$599<span>/mo</span></div>
-        <div class="size">101–250 active workers</div>
-        <ul>
-          <li>Everything in Growth</li>
-          <li>Custom TQ & task-code mapping</li>
-          <li>Full audit logs</li>
-          <li>Dedicated support</li>
-        </ul>
-        <a href="#contact" class="btn btn-outline" style="width:100%;text-align:center">Book a Demo</a>
-      </div>
-      <div class="tier">
-        <div class="plan">Enterprise</div>
-        <div class="price" style="font-size:2rem;padding:8px 0 2px">Custom</div>
-        <div class="size">250+ active workers</div>
-        <ul>
-          <li>Everything in Pro</li>
-          <li>Custom API integrations</li>
-          <li>SLA guarantees</li>
-          <li>Multi-branch support</li>
-        </ul>
-        <a href="#contact" class="btn btn-outline" style="width:100%;text-align:center">Talk to Us</a>
-      </div>
-    </div>
-    <div class="beta-banner">🌱 <strong>Founding cohort:</strong> join the first wave and lock in the Growth tier at <strong>$250/mo for your first 6 months</strong>.</div>
-  </div>
-</section>
-
-<section class="consult" id="consultants">
-  <div class="container consult-grid">
-    <div>
-      <span class="kicker">For Compliance Consultants</span>
-      <h2>Triple Your Client Load. Same Team.</h2>
-      <p>StayGreen is a white-label AI back office. It does the paperwork hours behind every account — <strong style="color:var(--text)">you stay the expert and own the relationship.</strong></p>
-      <div class="do-cols">
-        <div class="do-card">
-          <h4>StayGreen does</h4>
-          <ul>
-            <li>Reads training certs &amp; COIs from a photo</li>
-            <li>Tracks every expiration date</li>
-            <li>Drafts RAVS safety programs</li>
-            <li>Preps portal-ready upload packets</li>
-          </ul>
-        </div>
-        <div class="do-card you">
-          <h4>You still do</h4>
-          <ul>
-            <li>Approve everything before clients see it</li>
-            <li>Submit to ISN / Veriforce / Avetta</li>
-            <li>Own the client relationship</li>
-          </ul>
-        </div>
-      </div>
-      <a href="#contact" class="btn btn-outline">Ask About Founding Partnership</a>
-    </div>
-    <div class="math-card">
-      <h3>The Math</h3>
-      <div class="math-row"><span class="k">Accounts per person today</span><span class="v">15–25</span></div>
-      <div class="math-row"><span class="k">Accounts per person on StayGreen</span><span class="v up">50–75</span></div>
-      <div class="math-row"><span class="k">Your price to clients</span><span class="v">Unchanged</span></div>
-      <div class="math-row"><span class="k">Platform cost</span><span class="v">Custom per-contractor rate</span></div>
-      <p class="math-note">White-label with a written no-solicitation agreement, both directions — your clients never see us.</p>
-    </div>
-  </div>
-</section>
-
 <section class="cta-final" id="contact">
   <div class="container">
     <h2>Ready to <span class="grad-text-green">Stay Green?</span></h2>
-    <p>Book a 20-minute demo. Bring your messiest training cert photo and your latest COI — we'll parse them live.</p>
+    <p>Book a 20-minute demo. Bring a paper JSA from a live job — we'll read it, match it to a procedure library, and show you the record it produces.</p>
     <p style="margin-top:10px;font-size:.95rem;color:var(--muted)">New — put the Work Order → JSA flow on a <strong style="color:var(--text)">30-day free trial</strong>: bring one live job and retire the paper tailgate on it.</p>
     <form class="contact-form" id="demo-form">
       <div class="form-row">
@@ -619,7 +652,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
         <input type="email" name="email" required placeholder="Email *" autocomplete="email">
         <input type="tel" name="phone" placeholder="Phone" autocomplete="tel">
       </div>
-      <textarea name="message" rows="3" placeholder="Which portals are you in — ISN, Veriforce, Avetta? How many workers?"></textarea>
+      <textarea name="message" rows="3" placeholder="What are you running today — procedures and JSAs, or ISN / Veriforce / Avetta compliance? How many hands?"></textarea>
       <button type="submit" class="btn btn-green">Book a Demo</button>
       <div class="form-sent" id="form-sent">✓ Opening your email app — hit send and we'll get right back to you.</div>
     </form>
@@ -644,6 +677,24 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
     <div class="small">© 2026 StayGreen Compliance</div>
   </div>
 </footer>
+
+<script>
+/* Audience tabs (Larry 2026-11-06): operators land on the homepage by default; #contractor
+   deep-links the contractor tab. Hash is only written on a tab click, so shared anchor
+   links (#o-how, #how, #contact...) keep working untouched. */
+(function(){
+  function setTab(t){
+    var op = t !== 'contractors';
+    document.body.classList.toggle('v-operators', op);
+    document.body.classList.toggle('v-contractors', !op);
+    document.getElementById('tab-operators').classList.toggle('active', op);
+    document.getElementById('tab-contractors').classList.toggle('active', !op);
+  }
+  document.getElementById('tab-operators').addEventListener('click', function(){ setTab('operators'); try{history.replaceState(null,'','#operators')}catch(e){} });
+  document.getElementById('tab-contractors').addEventListener('click', function(){ setTab('contractors'); try{history.replaceState(null,'','#contractors')}catch(e){} });
+  setTab(location.hash === '#contractors' ? 'contractors' : 'operators');
+})();
+</script>
 
 </body>
 </html>
