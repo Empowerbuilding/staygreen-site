@@ -16,45 +16,51 @@
 <script defer src="https://analytics.empowerbuilding.ai/script.js" data-website-id="517da826-560d-414a-bb63-aa4f3fadacca"></script>
 <style>
 :root{
-  --navy-deep:#0b151e;
-  --navy:#12202e;
-  --slate:#3e536e;
-  --card:#16273a;
-  --card-border:#25405c;
-  --blue:#1c9af0;
-  --blue-dark:#0f6fd1;
-  --green:#3dbb2e;
-  --green-light:#5fd63c;
-  --text:#e8eef5;
-  --muted:#aabdd1;
+  /* ── StayGreen palette — formalized 2026-11-07 ──
+     Darks: navy family only. Greens: exactly two — --sg-green on dark
+     surfaces, --sg-green-ink on light. --sg-amber / --sg-red are
+     compliance-status colors only, never decorative. */
+  --sg-navy-900:#0b151e;   /* page base, heroes, footer */
+  --sg-navy-800:#12202e;   /* secondary band, heading ink on light */
+  --sg-navy-700:#16273a;   /* cards, panels */
+  --sg-navy-500:#25405c;   /* borders, dividers */
+  --sg-slate:#3e536e;      /* body text on light, deep gradient stop */
+  --sg-text:#e8eef5;       /* text on dark */
+  --sg-text-muted:#aabdd1; /* muted text on dark */
+  --sg-green:#3dbb2e;      /* brand green — dark surfaces + status green */
+  --sg-green-ink:#1f8f1f;  /* brand green — light surfaces */
+  --sg-blue:#1c9af0;       /* accent/link on dark */
+  --sg-blue-ink:#0f6fd1;   /* accent/link on light */
+  --sg-amber:#f0b429;      /* status only */
+  --sg-red:#e5484d;        /* status only */
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--navy-deep);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:'Inter',sans-serif;background:var(--sg-navy-900);color:var(--sg-text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 h1,h2,.wordmark{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
-a{color:var(--green-light);text-decoration:none}
+a{color:var(--sg-green);text-decoration:none}
 a:hover{text-decoration:underline}
 .container{max-width:1140px;margin:0 auto;padding:0 24px}
-.grad-text-green{background:linear-gradient(180deg,var(--green-light) 0%,var(--green) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-nav{position:sticky;top:0;z-index:100;background:rgba(11,21,30,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--card-border)}
+.grad-text-green{background:linear-gradient(180deg,var(--sg-green) 0%,var(--sg-green-ink) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{position:sticky;top:0;z-index:100;background:rgba(11,21,30,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--sg-navy-500)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
 .nav-logo{display:block;height:46px;width:auto}
 .nav-links{display:flex;gap:28px;align-items:center}
-.nav-links a{color:var(--muted);font-size:.9rem;font-weight:500;transition:color .2s;text-decoration:none}
-.nav-links a:hover{color:var(--text)}
+.nav-links a{color:var(--sg-text-muted);font-size:.9rem;font-weight:500;transition:color .2s;text-decoration:none}
+.nav-links a:hover{color:var(--sg-text)}
 main{max-width:800px;margin:0 auto;padding:64px 24px 88px}
 main h1{font-size:clamp(2.2rem,4.5vw,3rem);margin-bottom:8px}
-.effective{color:var(--muted);font-size:.9rem;margin-bottom:36px}
-main h2{font-size:1.45rem;margin:38px 0 12px;color:var(--text)}
-main p,main li{color:var(--muted);font-size:.97rem;margin-bottom:12px}
+.effective{color:var(--sg-text-muted);font-size:.9rem;margin-bottom:36px}
+main h2{font-size:1.45rem;margin:38px 0 12px;color:var(--sg-text)}
+main p,main li{color:var(--sg-text-muted);font-size:.97rem;margin-bottom:12px}
 main ul{padding-left:22px;margin-bottom:14px}
 main li{margin-bottom:6px}
-footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--navy-deep)}
+footer{border-top:1px solid var(--sg-navy-500);padding:28px 0;background:var(--sg-navy-900)}
 .foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
-.foot-inner .small{color:var(--muted);font-size:.85rem}
+.foot-inner .small{color:var(--sg-text-muted);font-size:.85rem}
 .foot-links{display:flex;gap:20px}
-.foot-links a{color:var(--muted);font-size:.85rem}
-.foot-links a:hover{color:var(--text)}
+.foot-links a{color:var(--sg-text-muted);font-size:.85rem}
+.foot-links a:hover{color:var(--sg-text)}
 @media(max-width:600px){.nav-logo{height:40px}main{padding:44px 20px 64px}}
 </style>
 </head>
@@ -119,7 +125,7 @@ footer{border-top:1px solid var(--card-border);padding:28px 0;background:var(--n
 
 <footer>
   <div class="container foot-inner">
-    <div class="wordmark" style="font-size:1.1rem"><span style="color:var(--text)">Stay</span><span class="grad-text-green">Green</span> <span style="color:var(--muted)">Compliance</span></div>
+    <div class="wordmark" style="font-size:1.1rem"><span style="color:var(--sg-text)">Stay</span><span class="grad-text-green">Green</span> <span style="color:var(--sg-text-muted)">Compliance</span></div>
     <div class="foot-links"><a href="/terms.html">Terms &amp; Conditions</a><a href="/privacy.html">Privacy Policy</a></div>
     <div class="small">© 2026 StayGreen Compliance</div>
   </div>
